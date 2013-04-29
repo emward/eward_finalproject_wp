@@ -30,6 +30,15 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 
+		<h1><?php the_title(); ?></h1>
+
+				<div id="social-links">
+					
+					<img id="facebook" src="<?php the_field('facebook_icon'); ?>" />
+					<img id="twitter" src="<?php the_field('twitter_icon'); ?>" />
+
+				</div>
+
 		<nav id="site-navigation" class="navigation-main" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'cilento_theme' ); ?></h1>
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'cilento_theme' ); ?>"><?php _e( 'Skip to content', 'cilento_theme' ); ?></a></div>

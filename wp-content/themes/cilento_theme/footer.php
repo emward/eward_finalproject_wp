@@ -13,7 +13,8 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div id="footer-info">
 		
-		<img src="http://localhost:8888/wp-content/uploads/2013/04/CilentoPhotography_logo.png" alt="Cilento Photography logo" width="150"/>
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/cilento_logo.gif" alt="Cilento Photography logo" width="160"/>
+
 
 		<ul>
 			

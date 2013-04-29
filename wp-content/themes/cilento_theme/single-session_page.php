@@ -21,34 +21,11 @@ get_header(); ?>
 					<?php endwhile; // end of the loop. ?>
 				</div>
 
-				<h1><?php the_title(); ?></h1>
+					<div id="slideshow">
+						<?php do_action('slideshow_deploy'); ?>
+					</div>
 
-				<div id="social-links">
-					
-					<img id="facebook" src="<?php the_field('facebook_icon'); ?>" />
-					<img id="twitter" src="<?php the_field('twitter_icon'); ?>" />
-
-				</div>
-
-				<div id="senior-slideshow" class="shadow">
-					<?php
-						$images = get_field('session_slideshow');
-							if( $images ): ?>
-								<div id="slider" class="flexslider">
-									<ul class="slides">
-										<?php foreach( $images as $image ): ?>
-											<li>
-												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-												<p class="flex-caption"><?php echo $image['caption']; ?></p>
-											</li>
-										<?php endforeach; ?>
-									</ul>
-				</div>
-				<?php endif; ?>
-
-				</div>
-
-				<div id="seniors-description">
+				<div id="session-description">
 					<?php the_field('section_description'); ?>
 				</div>
 

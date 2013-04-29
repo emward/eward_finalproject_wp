@@ -108,7 +108,7 @@ select,
 textarea {
 	width: 100%; 
     height: 100%;
-	background: url(images/paper_grunge.png) no-repeat center center fixed;
+	background: url(images/paper_grunge.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -149,13 +149,15 @@ body {
 #social-links img {
 	width: 25px;
 	height: 25px;
-	padding-top: 7px;
+	padding-top: 17px;
+	padding-right: 5px;
 }
 
 h1	{
 	font-size: 28px;
 	color: #006777;
 	float: left;
+	padding-top: 10px;
 }
 
 h2	{
@@ -172,13 +174,14 @@ h3	{
 /* =Senior Sessions
 ----------------------------------------------- */
 
-#senior-slideshow {
+#slideshow {
 	clear: both;
+	padding-bottom: 10px;
 }
 
 #in-studio {
 	float: left;
-	width: 200px;
+	width: 210px;
 	padding-right: 20px;
 }
 
@@ -189,7 +192,7 @@ h3	{
 
 #on-location {
 	float: left;
-	width: 240px;
+	width: 230px;
 	padding-right: 20px
 }
 
@@ -503,6 +506,7 @@ a:active {
 #footer-info {
 	float: left;
 	width: 700px;
+	height: 118px;
 	list-style: none;
 	text-align: left;
 	color: #825a15;
@@ -527,6 +531,7 @@ a:active {
 
 #footer-info a:hover {
 	color: #006777;
+	text-transform: capitalize;
 }
 
 /* Small menu
