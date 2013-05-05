@@ -25,10 +25,16 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		
+		<?php
+		/* <hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
+		*/
+		?>
+
+<?php if ( ! is_front_page() ) { ?>
 
 		<h1><?php the_title(); ?></h1>
 
@@ -44,7 +50,11 @@
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'cilento_theme' ); ?>"><?php _e( 'Skip to content', 'cilento_theme' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
-	<div id="main" class="site-main">
+		</nav><!-- #site-navigation -->
+
+	<?php } // end if front page ?> 
+
+</header><!-- #masthead -->
+
+<div id="main" class="site-main">

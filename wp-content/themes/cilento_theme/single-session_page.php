@@ -17,13 +17,11 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 				<div id="senior-page-text">
-					<?php while ( have_posts() ) : the_post(); ?>
-					<?php endwhile; // end of the loop. ?>
-				</div>
+					<?php while ( have_posts() ) : the_post(); 
+						the_content();
+					?>
 
-					<div id="slideshow">
-						<?php do_action('slideshow_deploy'); ?>
-					</div>
+				</div>
 
 				<div id="session-description">
 					<?php the_field('section_description'); ?>
@@ -44,6 +42,8 @@ get_header(); ?>
 				<div id="aside">
 					<?php the_field('foot_note'); ?>
 				</div>
+
+				<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

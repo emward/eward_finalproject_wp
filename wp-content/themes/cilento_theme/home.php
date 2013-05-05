@@ -24,21 +24,23 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		<div id="seniors-main">
-				<img src="<?php the_field('feature_image_1'); ?>" />
+				<img id="main-image" src="<?php the_field('feature_image_1'); ?>" />
 				<?php the_field('session_type_1'); ?>
 		</div>
 		
 		<div id="family-main">
-			<img src="<?php the_field('feature_image_2'); ?>" />
+			<img id="main-image" src="<?php the_field('feature_image_2'); ?>" />
 			<?php the_field('session_type_2'); ?>
 		</div>
 
 		<div id="wedding-main">
-			<img src="<?php the_field('feature_image_3'); ?>" />
+			<img id="main-image" src="<?php the_field('feature_image_3'); ?>" />
 			<?php the_field('session_type_3'); ?>
 		</div>
 
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?>
+<div id="home-footer">
+	<?php get_footer(); ?>
+</div>

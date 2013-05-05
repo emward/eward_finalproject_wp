@@ -171,6 +171,12 @@ h3	{
 	text-transform: uppercase;
 }
 
+/* =Homepage
+----------------------------------------------- */
+#home-header	{
+	display: none;
+}
+
 /* =Senior Sessions
 ----------------------------------------------- */
 
