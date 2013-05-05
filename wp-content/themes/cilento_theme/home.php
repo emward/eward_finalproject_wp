@@ -20,23 +20,21 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-			<?php endwhile; // end of the loop. ?>
-
-		<div id="seniors-main">
-				<img id="main-image" src="<?php the_field('feature_image_1'); ?>" />
-				<?php the_field('session_type_1'); ?>
-		</div>
-		
-		<div id="family-main">
-			<img id="main-image" src="<?php the_field('feature_image_2'); ?>" />
-			<?php the_field('session_type_2'); ?>
-		</div>
-
-		<div id="wedding-main">
-			<img id="main-image" src="<?php the_field('feature_image_3'); ?>" />
-			<?php the_field('session_type_3'); ?>
-		</div>
+		<?php $args = array( 
+			'post_type' => 'session_page',
+			'posts_per_page' => 10,
+			'orderby' => 'menu_order',
+			'order' => 'ASC'
+			);
+			$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<?php if ( has_post_thumbnail() ) { ?>
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+						<?php }
+					 echo '</div>'; ?>
+					<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+					<?php echo '<div class="entry-content">';
+			endwhile; ?>
 
 	</div><!-- #content -->
 </div><!-- #primary -->
