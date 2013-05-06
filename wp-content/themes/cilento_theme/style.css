@@ -188,6 +188,22 @@ h3	{
 /* =Homepage
 ----------------------------------------------- */
 
+.content-area	{
+	position: relative;
+	width: 710px;
+	height: 600px;
+}
+
+#home-image li 	{
+	display: inline;
+	width: 220px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#home-footer	{
+	float: clear;
+}
 
 /* =Senior Sessions
 ----------------------------------------------- */
