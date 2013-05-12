@@ -107,6 +107,30 @@ a img {
 
 }
 
+@font-face {
+    font-family: 'EBGaramondRegular';
+    src: url('EBGaramond-webfont.eot');
+    src: url('EBGaramond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('EBGaramond-webfont.woff') format('woff'),
+         url('EBGaramond-webfont.ttf') format('truetype'),
+         url('EBGaramond-webfont.svg#EBGaramondRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'EBGaramondSC';
+    src: url('EBGaramondSC-webfont.eot');
+    src: url('EBGaramondSC-webfont.eot?#iefix') format('embedded-opentype'),
+         url('EBGaramondSC-webfont.woff') format('woff'),
+         url('EBGaramondSC-webfont.ttf') format('truetype'),
+         url('EBGaramondSC-webfont.svg#EBGaramondSC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* =Global
 ----------------------------------------------- */
 
@@ -127,18 +151,18 @@ textarea {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-	color: #3f221b;
-	font-family: 'EB Garamond';
-	font-weight: 400;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
 }
 
 body {
 	width: 700px;
 	margin: auto;
 	padding: 0px;
+	color: #3f221b;
+	font-family: 'EBGaramondRegular';
+	font-weight: normal;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
 }
 
 .site-title	{
@@ -188,17 +212,47 @@ h3	{
 /* =Homepage
 ----------------------------------------------- */
 
-.content-area	{
-	position: relative;
-	width: 710px;
-	height: 600px;
+.session-thumb	{
+	float: left;
+	display: block;
+	width: 32%;
+	margin-top: 20%;
+	margin-bottom: 10%;
 }
 
-#home-image li 	{
-	display: inline;
-	width: 220px;
-	padding-left: 10px;
-	padding-right: 10px;
+.session-thumb img {
+	width: 200px;
+	height: 200px;
+	border: solid #f1ebc7 5px;
+	-webkit-box-shadow: 5px 5px 5px 1px rgba(57, 57, 57, .20);
+	-moz-box-shadow: 5px 5px 5px 1px rgba(57, 57, 57, .20);
+	box-shadow: 5px 5px 5px 1px rgba(57, 57, 57, .20);
+}
+
+.session-thumb h2	{
+	text-align: center;
+	margin-left: -15px;
+}
+
+.session-thumb a:link, a:visited	{
+	text-decoration: none;
+}
+
+.session-thumb h2:hover, h2:active {
+	text-transform: capitalize;
+	color: #825a15;
+}
+
+.session-thumb h2:before { 
+	content: "{";
+	color: #006777;
+	font-weight: bold;
+}
+
+.session-thumb h2:after { 
+	content: "}";
+	color: #006777;
+	font-weight: bold;
 }
 
 #home-footer	{
@@ -213,15 +267,19 @@ h3	{
 	padding-bottom: 10px;
 }
 
+#session-description	{
+	padding-top: 10px;
+}
+
 #in-studio {
 	float: left;
-	width: 210px;
+	width: 205px;
 	padding-right: 20px;
 }
 
 #in-studio li {
-	padding-left: 25px;
-	list-style: inside;
+	list-style: disc;
+	margin-left: 20px;
 }
 
 #on-location {
@@ -231,8 +289,8 @@ h3	{
 }
 
 #on-location li {
-	padding-left: 25px;
-	list-style: inside;
+	list-style: disc;
+	margin-left: 20px;
 }
 
 #combination {
@@ -241,8 +299,8 @@ h3	{
 }
 
 #combination li {
-	padding-left: 25px;
-	list-style: inside;
+	list-style: disc;
+	margin-left: 20px;
 }
 
 #aside {
@@ -524,8 +582,7 @@ a:active {
 }
 .navigation-main ul ul a:link, a:hover {
 	font-size: 12px;
-	font-weight: 400;
-	text-transform: lowercase;
+	text-transform: capitalize;
 	height: 25px;
 }
 .navigation-main ul li:hover > ul {

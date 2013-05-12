@@ -22,19 +22,21 @@ get_header(); ?>
 		<?php $args = array( 
 			'post_type' => 'session_page',
 			'posts_per_page' => 10,
-			'id' => 'home-images',
+			'id' => 'home-image',
 			'orderby' => 'menu_order',
 			'order' => 'ASC'
 			);
-			$loop = new WP_Query( $args );
-				while ( $loop->have_posts() ) : $loop->the_post(); ?>
-					<?php if ( has_post_thumbnail() ) { ?>
-					<?php echo '<div class="entry-content">'; ?>
-					<ul>
-						<a href="<?php the_permalink(); ?>"><li id="home-image"><?php the_post_thumbnail(); } ?></li></a>
-						<a href="<?php the_permalink(); ?>"><h2 id="home-text"><?php the_title(); ?></h2></a>
-					</ul>
-				<?php endwhile; ?>
+			$loop = new WP_Query( $args ); ?>
+				<ul>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<li class="session-thumb">
+					<?php if ( has_post_thumbnail() ) : ?>
+					<a href="<?php the_permalink(); ?>"><div class="home-image"><?php the_post_thumbnail();?></div></a>
+					<?php endif; ?>  
+					<a href="<?php the_permalink(); ?>"><h2 id="home-text"><?php the_title(); ?></h2></a>
+					</li>
+					<?php endwhile; ?>
+				</ul>
 
 	</div><!-- #content -->
 </div><!-- #primary -->

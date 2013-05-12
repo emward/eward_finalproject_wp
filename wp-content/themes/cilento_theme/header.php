@@ -40,8 +40,8 @@
 
 				<div id="social-links">
 					
-					<img id="facebook" src="<?php the_field('facebook_icon'); ?>" />
-					<img id="twitter" src="<?php the_field('twitter_icon'); ?>" />
+					<a href="https://www.facebook.com/CilentoPhotography" target="_blank"><img id="facebook" src="<?php the_field('facebook_icon'); ?>" /></a>
+					<a href="https://www.twitter.com" target="_blank"><img id="twitter" src="<?php the_field('twitter_icon'); ?>" /></a>
 
 				</div>
 
